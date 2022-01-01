@@ -1,0 +1,95 @@
+local uis = game:GetService("UserInputService")
+
+game:GetService("Workspace").NANI:Play()
+wait(0.5)
+game:GetService("Workspace").GERend:Play()
+wait(0.5)
+game:GetService("Workspace").STWCamera:Play()
+wait(0.5)
+game:GetService("Workspace").STWCamera:Play()
+wait(0.1)
+game:GetService("Workspace").STWCamera:Play()
+wait(0.2)
+game:GetService("Workspace").Nope:Play()
+game:GetService("ReplicatedStorage").Thanos:FireServer()
+game:GetService("ReplicatedStorage").GojoEffect:FireServer()
+game:GetService("ReplicatedStorage").RTZEffectShiny:FireServer()
+game:GetService("ReplicatedStorage").GojoRedEffect3:FireServer()
+game:GetService("ReplicatedStorage").GojoRedEffect2:FireServer()
+
+
+
+uis.InputBegan:Connect(function(input, gameprocess)
+if not gameprocess then
+if input.KeyCode == Enum.KeyCode.T then
+for i,v in pairs(game.Players:GetPlayers()) do
+if v ~= game.Players.LocalPlayer then
+local args = {
+    [1] = v.Character.Humanoid,
+    [2] = 100,
+    [3] = 0.25,
+    [4] = nil --[[Vector3]]
+}
+
+game:GetService("ReplicatedStorage").VampireDamage:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").GojoRedEffect3:FireServer()
+end
+end
+end
+end
+end)
+--
+--
+uis.InputBegan:Connect(function(input, gameprocess)
+if not gameprocess then
+if input.KeyCode == Enum.KeyCode.B then
+for i,v in ipairs(game.Players:GetPlayers()) do
+if v ~= game.Players.LocalPlayer then 
+local args = {
+    [1] = v.Character.Humanoid,
+    [2] = 20,
+    [3] = 10,
+    [4] = nil --[[Vedddddddor3]]
+}
+
+game:GetService("ReplicatedStorage").VampireFreeze:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").ComeOnGojo2:FireServer()
+
+end
+end
+end
+end
+end)
+
+uis.InputBegan:Connect(function(input, gameprocess)
+if not gameprocess then
+if input.KeyCode == Enum.KeyCode.V then
+for i,v in ipairs(game.Players:GetPlayers()) do
+if v ~= game.Players.LocalPlayer then 
+game:GetService("ReplicatedStorage").GojoYell:FireServer()
+wait(0.3)
+game:GetService("ReplicatedStorage").GojoYell:FireServer()
+wait(0.2)
+game:GetService("ReplicatedStorage").GojoYell:FireServer()
+end
+end
+end
+end
+end)
+-
+uis.InputBegan:Connect(function(input, gameprocess)
+if not gameprocess then
+if input.KeyCode == Enum.KeyCode.H then
+for i,v in ipairs(game.Players:GetPlayers()) do
+if v ~= game.Players.LocalPlayer then 
+local args = {
+    [1] = v.Character
+}
+
+game:GetService("ReplicatedStorage").Beatdown:FireServer(unpack(args))
+
+end
+end
+end
+end
+end)
